@@ -16,7 +16,8 @@ typedef NS_ENUM(NSInteger, DATATYPE) {
     LYPickerDataArea//地点
 };
 ## 用法
-
+下载后拖入工程，或者用pod 安装
+pod 'LYPickerChiceView', '~> 0.0.1'
 
 ```
 //创建
