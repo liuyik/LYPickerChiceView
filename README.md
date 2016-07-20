@@ -35,7 +35,7 @@ _picker = [[LYPickerChiceView alloc] initWithFrame:self.view.bounds];
      */    
  }
 ```
-
+欢迎大家指正。
 
 
 
