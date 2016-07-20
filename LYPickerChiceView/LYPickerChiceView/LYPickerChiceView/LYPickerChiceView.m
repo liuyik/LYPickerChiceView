@@ -29,6 +29,8 @@
 
 /** 背景 */
 @property (nonatomic,strong)UIView         *bgView;
+/** 标题 */
+@property (nonatomic,strong)UILabel  *titleLabel;
 /** 取消按钮 */
 @property (nonatomic,strong)UIButton       *cancelBtn;
 /** 完成按钮 */
@@ -122,11 +124,11 @@
     [self.completesBtn setTitleColor:RGBA(0, 122, 255, 1) forState:UIControlStateNormal];
     
     //选择titi
-    self.customTitle = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.cancelBtn.frame)+5, 0, kScreenWidth-100, 44)];
-    [self.bgView addSubview:self.customTitle];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.cancelBtn.frame)+5, 0, kScreenWidth-100, 44)];
+    [self.bgView addSubview:self.titleLabel];
 
-    self.customTitle.font = [UIFont systemFontOfSize:15];
-    self.customTitle.textAlignment = NSTextAlignmentCenter;
+    self.titleLabel.font = [UIFont systemFontOfSize:15];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
     
     //线
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.cancelBtn.frame), kScreenWidth, 0.5)];
@@ -151,18 +153,19 @@
         {
             self.data = _customData;
             self.info = [self.data firstObject];
+            self.titleLabel.text = _customTitle;
         }
             break;
         case LYPickerDataGender:
         {
-            self.customTitle.text = @"请选择性别";
+            self.titleLabel.text = @"请选择性别";
             self.data = @[@"男",@"女"];
             self.info = [self.data firstObject];
         }
             break;
         case LYPickerDataHeight:
         {
-            self.customTitle.text = @"请选择身高";
+            self.titleLabel.text = @"请选择身高";
             NSMutableArray *heightArr = [NSMutableArray array];
             for (int i = 100; i<=250; i++) {
                 NSString *height = [NSString stringWithFormat:@"%d",i];
@@ -174,7 +177,7 @@
             break;
         case LYPickerDataWeight:
         {
-            self.customTitle.text = @"请选择体重";
+            self.titleLabel.text = @"请选择体重";
             NSMutableArray *weightArr = [NSMutableArray array];
             for (int i = 30; i<=200; i++) {
                 NSString *weight = [NSString stringWithFormat:@"%d",i];
@@ -186,7 +189,7 @@
             break;
         case LYPickerDataSalary:
         {
-            self.customTitle.text = @"请选择工资";
+            self.titleLabel.text = @"请选择工资";
             NSMutableArray *salaryArr = [NSMutableArray array];
             for (int i = 2000; i<=20000; i=i+500) {
                 NSString *salary = [NSString stringWithFormat:@"%d",i];
@@ -198,14 +201,14 @@
             break;
         case LYPickerDataDete:
         {
-            self.customTitle.text = @"请选择出生年月";
+            self.titleLabel.text = @"请选择出生年月";
             //加载时间数据
             [self loadDate];
         }
             break;
         case LYPickerDataArea:
         {
-            self.customTitle.text = @"请选择地区";
+            self.titleLabel.text = @"请选择地区";
             NSString *path = [[NSBundle mainBundle]pathForResource:@"area" ofType:@"plist"];
             self.data = [[NSArray alloc]initWithContentsOfFile:path];
             //加载地址数据
@@ -235,7 +238,7 @@
     self.month = [self.pickerView selectedRowInComponent:1] + 1;
     self.day   = [self.pickerView selectedRowInComponent:2] + 1;
     
-    self.customTitle.text = [NSString stringWithFormat:@"%ld年%ld月%ld日", self.year, self.month, self.day];
+    self.titleLabel.text = [NSString stringWithFormat:@"%ld年%ld月%ld日", self.year, self.month, self.day];
 }
 
 #pragma mark - 加载地区的处理
@@ -286,7 +289,7 @@
     }
     
     NSString *title = [NSString stringWithFormat:@"%@ %@ %@", self.province, self.city, self.area];
-    self.customTitle.text = title;
+    self.titleLabel.text = title;
 }
 
 #pragma mark - UIPickerViewDataSource,UIPickerViewDelegate
@@ -418,7 +421,7 @@
     }
     else {
         self.info = self.data[row];
-        self.customTitle.text = self.info;
+        self.titleLabel.text = self.info;
     }
     NSLog(@"%ld,%ld",component,row);
 }
@@ -436,9 +439,9 @@
 
     if (_dataType == LYPickerDataDete) {
         
-        NSString *yearStr = [NSString stringWithFormat:@"%ld年",self.year];
-        NSString *monthStr = [NSString stringWithFormat:@"%ld月",self.month];
-        NSString *dayStr = [NSString stringWithFormat:@"%ld日",self.day];
+        NSString *yearStr = [NSString stringWithFormat:@"%ld",self.year];
+        NSString *monthStr = [NSString stringWithFormat:@"%ld",self.month];
+        NSString *dayStr = [NSString stringWithFormat:@"%ld",self.day];
         NSDictionary *dateDic = @{@"year":yearStr,@"month":monthStr,@"day":dayStr};
         [self.delegate PickerSelectorIndixInfo:dateDic];
     }

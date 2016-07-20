@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D607E7D91D3F08FC008FF477 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = D607E7D41D3F08FC008FF477 /* area.plist */; };
+		D607E7DA1D3F08FC008FF477 /* LYPickerChiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D607E7D61D3F08FC008FF477 /* LYPickerChiceView.m */; };
+		D607E7DB1D3F08FC008FF477 /* NSCalendar+LYTime.m in Sources */ = {isa = PBXBuildFile; fileRef = D607E7D81D3F08FC008FF477 /* NSCalendar+LYTime.m */; };
 		D6771A651D3E307800C9069A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6771A641D3E307800C9069A /* main.m */; };
 		D6771A681D3E307800C9069A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6771A671D3E307800C9069A /* AppDelegate.m */; };
 		D6771A6B1D3E307800C9069A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6771A6A1D3E307800C9069A /* ViewController.m */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D607E7D41D3F08FC008FF477 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		D607E7D51D3F08FC008FF477 /* LYPickerChiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPickerChiceView.h; sourceTree = "<group>"; };
+		D607E7D61D3F08FC008FF477 /* LYPickerChiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPickerChiceView.m; sourceTree = "<group>"; };
+		D607E7D71D3F08FC008FF477 /* NSCalendar+LYTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+LYTime.h"; sourceTree = "<group>"; };
+		D607E7D81D3F08FC008FF477 /* NSCalendar+LYTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+LYTime.m"; sourceTree = "<group>"; };
 		D6771A601D3E307800C9069A /* LYPickerChiceView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYPickerChiceView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6771A641D3E307800C9069A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6771A661D3E307800C9069A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D607E7D31D3F08FC008FF477 /* LYPickerChiceView */ = {
+			isa = PBXGroup;
+			children = (
+				D607E7D41D3F08FC008FF477 /* area.plist */,
+				D607E7D51D3F08FC008FF477 /* LYPickerChiceView.h */,
+				D607E7D61D3F08FC008FF477 /* LYPickerChiceView.m */,
+				D607E7D71D3F08FC008FF477 /* NSCalendar+LYTime.h */,
+				D607E7D81D3F08FC008FF477 /* NSCalendar+LYTime.m */,
+			);
+			path = LYPickerChiceView;
+			sourceTree = "<group>";
+		};
 		D6771A571D3E307800C9069A = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +78,7 @@
 		D6771A621D3E307800C9069A /* LYPickerChiceView */ = {
 			isa = PBXGroup;
 			children = (
+				D607E7D31D3F08FC008FF477 /* LYPickerChiceView */,
 				D6771A661D3E307800C9069A /* AppDelegate.h */,
 				D6771A671D3E307800C9069A /* AppDelegate.m */,
 				D6771A691D3E307800C9069A /* ViewController.h */,
@@ -137,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6771A731D3E307800C9069A /* LaunchScreen.storyboard in Resources */,
+				D607E7D91D3F08FC008FF477 /* area.plist in Resources */,
 				D6771A701D3E307800C9069A /* Assets.xcassets in Resources */,
 				D6771A6E1D3E307800C9069A /* Main.storyboard in Resources */,
 			);
@@ -149,6 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D607E7DB1D3F08FC008FF477 /* NSCalendar+LYTime.m in Sources */,
+				D607E7DA1D3F08FC008FF477 /* LYPickerChiceView.m in Sources */,
 				D6771A6B1D3E307800C9069A /* ViewController.m in Sources */,
 				D6771A681D3E307800C9069A /* AppDelegate.m in Sources */,
 				D6771A651D3E307800C9069A /* main.m in Sources */,
@@ -300,6 +324,7 @@
 				D6771A791D3E307800C9069A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

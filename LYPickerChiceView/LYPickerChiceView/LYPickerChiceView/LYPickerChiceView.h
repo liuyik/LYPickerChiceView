@@ -11,20 +11,22 @@
 @protocol LYPickerChiceViewDelegate <NSObject>
 
 @optional;
-
+/**
+ * 返回选中内容的协议
+ */
 - (void)PickerSelectorIndixInfo:(NSDictionary *)info;
 
 @end
 
 //数据类型枚举
 typedef NS_ENUM(NSInteger, DATATYPE) {
-    LYPickerDataCustom,
-    LYPickerDataGender,
-    LYPickerDataHeight,
-    LYPickerDataWeight,
-    LYPickerDataSalary,
-    LYPickerDataDete,
-    LYPickerDataArea
+    LYPickerDataCustom,//自定义
+    LYPickerDataGender,//性别
+    LYPickerDataHeight,//身高
+    LYPickerDataWeight,//体重
+    LYPickerDataSalary,//工资
+    LYPickerDataDete,//时间
+    LYPickerDataArea//地点
 };
 
 @interface LYPickerChiceView : UIView
@@ -42,11 +44,11 @@ typedef NS_ENUM(NSInteger, DATATYPE) {
 /**
  * 自定义标题
  */
-@property (nonatomic, strong) UILabel  *customTitle;
+@property (nonatomic, copy) NSString  *customTitle;
 
 /**
  * 返回选中内容的协议
  */
-@property (nonatomic,assign)id<LYPickerChiceViewDelegate>delegate;
+@property (nonatomic, assign)id<LYPickerChiceViewDelegate>delegate;
 
 @end
