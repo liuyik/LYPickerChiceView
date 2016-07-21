@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.author             = { "刘毅" => "352601605@qq.com" }
   s.source       = { :git => "https://github.com/liuyik/LYPickerChiceView.git", :tag => s.version}
   s.source_files  = "LYPickerChiceView/**/*.{h,m}"
-  s.resource     = 'LYPickerChiceView/LYPickerChiceView/.’
+
   s.requires_arc = true
 
 end
