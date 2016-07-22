@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LYPickerChiceView"
-  s.version      = “0.1.0”
+  s.version      = "0.0.1"
   s.summary      = "A picker chice view used on iOS."
   s.homepage     = "https://github.com/liuyik/LYPickerChiceView"
   s.license      = "MIT"
