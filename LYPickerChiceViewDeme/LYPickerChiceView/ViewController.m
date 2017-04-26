@@ -116,7 +116,7 @@
         default:
             break;
     }
-    return YES;
+    return NO;
 }
 #pragma mark - 返回选中内容的协议
 - (void)PickerSelectorIndixInfo:(NSDictionary *)info {
