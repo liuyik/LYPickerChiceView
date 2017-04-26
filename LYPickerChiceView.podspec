@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.platform     = :ios
   s.ios.deployment_target = "7.0"
-  s.author       = { "刘毅" => "352601605@qq.com" }
+  s.author       = { "liuyik" => "352601605@qq.com" }
   s.source       = { :git => "https://github.com/liuyik/LYPickerChiceView.git", :tag => s.version}
-   s.requires_arc = true
+    s.requires_arc = true
   s.resources    = "LYPickerChiceView/*.{png,xib,nib,bundle,plist}"
   s.source_files  = "LYPickerChiceView/*.{h,m}"
 
